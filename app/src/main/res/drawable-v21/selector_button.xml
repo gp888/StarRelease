@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+    android:color="@color/prac_end">//这里是扩散水波纹的色值
+    <item android:drawable="@color/prac_start" />
+</ripple>
+    <!--没有按压的时候为透明状态-->
+<!--<item android:id="@android:id/mask" android:drawable="@color/white" />里面的色值可以任选一个-->

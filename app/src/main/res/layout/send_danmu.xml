@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--发送弹幕布局-->
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_danlayout"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:paddingRight="5dp"
+    android:paddingLeft="5dp"
+    android:background="@color/prac_end"
+    android:layout_alignBottom="@+id/surface"
+    android:visibility="gone">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/submitorders_dialog_bg">
+        <EditText
+            android:id="@+id/et_content"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="40dp"
+            android:background="@null"
+            android:hint="说点什么吧~"
+            android:textSize="14sp"
+            android:textCursorDrawable="@null"/>
+        <Button
+            android:id="@+id/tv_send"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="发送"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5dp"
+            android:onClick="onClick" />
+    </LinearLayout>
+</RelativeLayout>

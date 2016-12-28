@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:keepScreenOn="true"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:id="@+id/video_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.vhall.business.widget.ContainerLayout
+            android:id="@+id/rl_video_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true">
+        </com.vhall.business.widget.ContainerLayout>
+
+        <master.flame.danmaku.ui.widget.DanmakuView
+            android:id="@+id/sv_danmaku"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:onClick="onClick"
+            android:layout_alignBottom="@+id/rl_video_container"/>
+        <include
+            layout="@layout/video_controller"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignBottom="@+id/rl_video_container" />
+        <include
+            layout="@layout/bottom_bar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignBottom="@+id/rl_video_container"
+            />
+        <include
+            layout="@layout/top_bar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignBottom="@+id/rl_video_container"/>
+        <RelativeLayout
+            android:id="@+id/rl_video_adver"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone">
+            <ImageView
+                android:id="@+id/video_adver"
+                android:layout_width="160dp"
+                android:layout_height="130dp"
+                android:scaleType="fitXY"/>
+            <ImageView
+                android:id="@+id/close_video_adver"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:src="@drawable/icon_close"
+                android:layout_alignRight="@+id/video_adver"
+                android:layout_alignTop="@+id/video_adver"/>
+        </RelativeLayout>
+
+        <include
+            layout="@layout/send_danmu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/rl_video_container"/>
+    </RelativeLayout>
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/watch_tab"
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:paddingBottom="2dp"
+        style="@style/MyCustomTabLayout" />
+    <android.support.v4.view.ViewPager
+        android:layout_below="@+id/tabLayout"
+        android:id="@+id/viewPager1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</LinearLayout>

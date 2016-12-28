@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#f97a6b</color> 
+    <color name="colorPrimaryDark">#f97a6b</color> 
+    <color name="colorAccent">#f97a6b</color>  
+
+    <color name="colorBlack">#000000</color> 
+    <color name="status_bar_color">#ededec</color> 
+    <color name="white">#ffffff</color> 
+    <color name="category_tab_highlight_bg">#C7C6C2</color> 
+    <color name="category_tab_text">#ff707070</color> 
+    <color name="category_tab_highlight_text">#333333</color> 
+    <color name="category_tab_lowlight_text">#999999</color> 
+    <color name="divider">#ffdfdfdc</color> 
+    <color name="top_category_bar_background">#ffefefee</color>  
+
+    <color name="red">#ff0000</color> 
+    <color name="green">#00ff00</color> 
+    <color name="blue">#0000ff</color> 
+    <color name="pink">#ff00ff</color> 
+
+    <color name="prac_start">#E6DFDFDC</color>
+    <color name="prac_middle">#E6E5E5E2</color>
+    <color name="prac_end">#E6C7C6C2</color>  
+
+    <color name="transparent">#0000</color> 
+    <color name="translucent">#66000000</color> 
+    <color name="red_pocket">#F24443</color> 
+    <color name="new_theme">#F82831</color>
+
+    <color name="newpink">#f97a6b</color>
+    <color name="tabback">#b3f97a6b</color>
+</resources>

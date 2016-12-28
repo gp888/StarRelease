@@ -1,0 +1,64 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/ll_root"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    android:keepScreenOn="true">
+    <RelativeLayout
+        android:id="@+id/video_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible">
+
+        <SurfaceView
+            android:id="@+id/surface"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_gravity="center">
+        </SurfaceView>
+
+        <master.flame.danmaku.ui.widget.DanmakuView
+            android:id="@+id/sv_danmaku"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:onClick="onClick"/>
+        <include
+            android:id="@+id/root_layout"
+            layout="@layout/video_controller"
+            android:layout_centerInParent="true"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            />
+        <include
+            layout="@layout/bottom_bar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignBottom="@+id/surface"/>
+        <include
+            layout="@layout/top_bar"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:layout_alignTop="@+id/surface"
+            />
+        <include
+            layout="@layout/send_danmu"/>
+    </RelativeLayout>
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/watch_tab"
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:paddingBottom="2dp"
+        style="@style/MyCustomTabLayout">
+    </android.support.design.widget.TabLayout>
+
+    <android.support.v4.view.ViewPager
+        android:layout_below="@+id/tabLayout"
+        android:id="@+id/viewPager1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </android.support.v4.view.ViewPager>
+</LinearLayout>

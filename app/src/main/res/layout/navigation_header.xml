@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="180dp"
+    android:background="@drawable/user_back"
+    android:orientation="vertical"
+    android:gravity="center">
+    <ImageView
+        android:id="@+id/navi_head"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/icon_mo"/>
+
+    <TextView
+        android:id="@+id/user_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="点击头像登录"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:id="@+id/user_money"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="猫饼干:0"
+        android:textSize="14sp"
+        android:textColor="@color/white"
+        android:layout_marginTop="5dp"/>
+</LinearLayout>

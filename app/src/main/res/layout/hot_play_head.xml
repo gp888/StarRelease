@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <View
+        android:id="@+id/null_view"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+    <com.bigkoo.convenientbanner.ConvenientBanner
+        android:id="@+id/hot_banner"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        app:canLoop="true"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="5dp"
+        android:layout_below="@+id/null_view"
+        android:visibility="gone"/>
+    <LinearLayout
+        android:id="@+id/ll_adver"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="5dp"
+        android:background="#44000000"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingBottom="4dp"
+        android:paddingTop="4dp"
+        android:layout_alignBottom="@+id/hot_banner"
+        android:visibility="gone">
+        <TextView
+            android:id="@+id/adver_title"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:text=""
+            android:gravity="center"
+            android:textSize="12sp"
+            android:layout_marginLeft="10dp"
+            android:textColor="#dfdfdc"/>
+    </LinearLayout>
+</RelativeLayout>

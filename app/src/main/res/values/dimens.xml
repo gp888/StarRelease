@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="category_tab_text">15.0sp</dimen>
+    <dimen name="top_category_height">30.0dip</dimen>
+    <dimen name="space_small">10dp</dimen>
+    <dimen name="smile_board_height">180dp</dimen>
+    <dimen name="button_height_tall">44dp</dimen>
+    <dimen name="font_large">15sp</dimen>
+</resources>

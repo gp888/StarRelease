@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="vhall_app_key">1285992200</string>
+    <string name="vhall_app_secret_key">9bccfb3d463dce01720c420317000287</string>
+
+    <string name="weixin_key">wx836b98514de0fc3e</string>
+    <string name="weixin_secret">d4624c36b6795d1d99dcf0547af5443d</string>
+
+    <string name="sina_key">3053461860</string>
+    <string name="sina_secret">947dc960da10d5e8d2ef15ff6ec7189c</string>
+
+    <string name="qq_key">1104987850</string>
+    <string name="qq_secret">mfImmTx0s8v6j2sK</string>
+</resources>

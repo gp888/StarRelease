@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/prac_end"
+    android:layout_marginTop="10dp"
+    android:padding="10dp">
+    <TextView
+        android:id="@+id/message_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:textColor="@color/colorBlack"
+        android:text="前方高能,电影反动势力来了前方高能,电影反动势力来前方高能,电影反动势力来"
+        android:layout_toLeftOf="@+id/message_date"
+        android:layout_marginRight="20dp"
+        android:singleLine="true"
+        android:ellipsize="marquee"/>
+    <TextView
+        android:id="@+id/message_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:text="2016-09-20"
+        android:textColor="@color/colorBlack"
+        android:textSize="14sp"
+        android:layout_marginRight="10dp"/>
+
+    <TextView
+        android:id="@+id/message_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/message_title"
+        android:singleLine="true"
+        android:layout_marginTop="10dp"
+        android:textSize="12sp"
+        android:textColor="#666666"
+        android:text="前方高能,电影反动势力来前方高能,电影反动势力来前方高能,电影反动势力来前方高能,电影反动势力来"
+        android:layout_marginRight="30dp"/>
+</RelativeLayout>

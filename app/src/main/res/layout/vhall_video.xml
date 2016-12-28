@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/video_box"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.vhall.business.widget.ContainerLayout
+        android:id="@+id/video_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <master.flame.danmaku.ui.widget.DanmakuView
+        android:id="@+id/video_danmaku"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:onClick="onClick"/>
+
+    <!--重新播放-->
+    <LinearLayout
+        android:id="@+id/video_replay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#66000000"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/video_status_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/small_problem"
+            android:textColor="@android:color/white"
+            android:textSize="14dp"/>
+
+        <ImageView
+            android:id="@+id/video_replay_icon"
+            android:layout_width="100dp"
+            android:layout_height="60dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/icon_play_play"/>
+    </LinearLayout>
+
+    <!-- 网络提示-->
+    <LinearLayout
+        android:id="@+id/video_net"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#66000000"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="您正在使用移动网络播放视频\n可能产生较高流量费用"
+            android:textColor="@android:color/white"/>
+
+        <TextView
+            android:id="@+id/video_continue"
+            android:layout_width="100dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="继续"
+            android:textColor="@android:color/white"/>
+    </LinearLayout>
+
+    <!--加载中-->
+    <LinearLayout
+        android:id="@+id/video_loading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:indeterminateBehavior="repeat"
+            android:indeterminateOnly="true"/>
+        <TextView
+            android:id="@+id/video_speed"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_height="wrap_content"
+            android:text="0Kb/s"
+            android:textColor="@android:color/white"
+            android:visibility="gone"/>
+    </LinearLayout>
+
+    <!-- 中间触摸提示-->
+    <include
+        layout="@layout/player_touch_gestures"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"/>
+
+    <!-- 底部栏-->
+    <include
+        layout="@layout/bottom_bar"/>
+
+    <!-- 顶部栏-->
+    <include
+        layout="@layout/top_bar"/>
+
+    <include
+        layout="@layout/send_danmu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/video_container"/>
+</RelativeLayout>

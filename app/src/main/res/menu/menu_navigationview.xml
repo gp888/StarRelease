@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/user_message"
+            android:icon="@drawable/icon_message"
+            android:title="@string/myMessage"/>
+        <item
+            android:id="@+id/user_collection"
+            android:icon="@drawable/icon_subscription"
+            android:title="@string/myCollection"/>
+        <item
+            android:id="@+id/user_play_record"
+            android:icon="@drawable/icon_playrecord"
+            android:title="@string/myPalyrecord"/>
+        <item
+            android:id="@+id/user_task"
+            android:icon="@drawable/icon_mission"
+            android:title="@string/missionCenter"/>
+        <item
+            android:id="@+id/point_shop"
+            android:icon="@drawable/icon_shop"
+            android:title="@string/jiFenShop"/>
+        <item
+            android:id="@+id/user_setting"
+            android:icon="@drawable/icon_setting"
+            android:title="@string/action_settings"/>
+    </group>
+</menu>

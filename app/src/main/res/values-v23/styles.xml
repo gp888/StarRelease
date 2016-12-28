@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+        <style name="AppTheme" parent="AppTheme.Base"/>
+        <style name="AppTheme.Base" parent="Theme.AppCompat.Light.NoActionBar">
+                <!--<item name="actionOverflowButtonStyle">@style/OverflowButtonStyle</item>-->
+                <item name="colorPrimary">@color/newpink</item>
+                <item name="colorPrimaryDark">@color/newpink</item>
+                <item name="colorAccent">@color/colorAccent</item>
+                <item name="android:windowNoTitle">true</item>
+                <item name="windowActionBar">false</item>
+                <item name="android:statusBarColor">@color/newpink</item>
+                <!--<item name="android:windowLightStatusBar">false</item>-->
+                <!--<item name="actionOverflowButtonStyle">@style/OverflowButtonStyle</item>-->
+        </style>
+</resources>
