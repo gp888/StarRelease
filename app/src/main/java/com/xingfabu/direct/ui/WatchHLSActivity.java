@@ -170,8 +170,8 @@ public class WatchHLSActivity extends BaseActivity implements SurfaceHolder.Call
 	private RelativeLayout root_layout;// 根布局
 	private RelativeLayout mRelativeVideoSize;
 	private LinearLayout gesture_volume_layout;//音量控制布局
-	private RelativeLayout gesture_bright_layout;//亮度控制布局
-	private RelativeLayout gesture_progress_layout;//快进布局
+	private LinearLayout gesture_bright_layout;//亮度控制布局
+	private LinearLayout gesture_progress_layout;//快进布局
 	private TextView geture_tv_volume_percentage, geture_tv_bright_percentage;// 音量百分比,亮度百分比
 	private ImageView gesture_iv_player_volume, gesture_iv_player_bright;// 音量图标,亮度图标
 	private ImageView gesture_iv_progress;// 快进或快退标志
@@ -398,8 +398,8 @@ public class WatchHLSActivity extends BaseActivity implements SurfaceHolder.Call
 
 		root_layout = (RelativeLayout) findViewById(R.id.root_layout);
 		gesture_volume_layout = (LinearLayout) findViewById(R.id.gesture_volume_layout);
-		gesture_bright_layout = (RelativeLayout) findViewById(R.id.gesture_bright_layout);
-		gesture_progress_layout = (RelativeLayout) findViewById(R.id.gesture_progress_layout);
+		gesture_bright_layout = (LinearLayout) findViewById(R.id.gesture_bright_layout);
+		gesture_progress_layout = (LinearLayout) findViewById(R.id.gesture_progress_layout);
 		geture_tv_progress_time = (TextView) findViewById(R.id.geture_tv_progress_time);
 		geture_tv_volume_percentage = (TextView) findViewById(R.id.geture_tv_volume_percentage);
 		geture_tv_bright_percentage = (TextView) findViewById(R.id.geture_tv_bright_percentage);
