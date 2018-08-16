@@ -1976,7 +1976,7 @@ public class WatchActivity extends BaseActivity implements View.OnClickListener,
 							//req.extData ="";
 							api.sendReq(req);
 						}else if("2".equals(payType)){
-							String orderInfo = StarReleaseUtil.getOrderInfo("红包打赏", "红包打赏", price,res.result.orderNo);
+							String orderInfo = StarReleaseUtil.getOrderInfo("红包打赏", "红包打赏", price, res.result.orderNo);
 							String sign = StarReleaseUtil.sign(orderInfo);
 							try {
 								sign = URLEncoder.encode(sign, "UTF-8");
@@ -1987,7 +1987,6 @@ public class WatchActivity extends BaseActivity implements View.OnClickListener,
 							Runnable payRunnable = new Runnable() {
 								@Override
 								public void run() {
-									// 构造PayTask 对象
 									PayTask alipay = new PayTask(WatchActivity.this);
 									// 调用支付接口，获取支付结果
 									String result = alipay.pay(payInfo, true);

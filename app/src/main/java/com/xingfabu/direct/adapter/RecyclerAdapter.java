@@ -26,7 +26,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter implements View.OnClic
     private List<Video> data;
     private OnRecyclerViewItemClick mItemClickListener;
 
-    public static interface OnRecyclerViewItemClick{
+    public interface OnRecyclerViewItemClick{
         void onItemClick(View view, Video data);
     }
 
@@ -123,6 +123,11 @@ public class RecyclerAdapter extends RecyclerView.Adapter implements View.OnClic
 
             holder.itemView.setTag(data.get(position));
         }
+    }
+
+    @Override
+    public void onBindViewHolder(RecyclerView.ViewHolder holder, int position, List payloads) {
+        super.onBindViewHolder(holder, position, payloads);
     }
 
     @Override

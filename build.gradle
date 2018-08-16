@@ -1,9 +1,10 @@
 buildscript {
     repositories {
         jcenter()
+        google()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:2.2.2'
+        classpath 'com.android.tools.build:gradle:3.1.0'
     }
 }
 
@@ -11,9 +12,19 @@ allprojects {
     repositories {
         jcenter()
         maven { url "https://jitpack.io" }//添加BaseRecyclerAdapterHelper
+        google()
     }
 }
 
 task clean(type: Delete) {
     delete rootProject.buildDir
+}
+
+
+// use the ext object to add any properties to the project
+project.ext {
+    compileSdkVersion = 26
+    buildToolsVersion = '26.0.2'
+    minSdkVersion = 16
+    targetSdkVersion = 26
 }

@@ -150,7 +150,6 @@ public class LoginActivity extends BaseActivity{
         mShareAPI.onActivityResult(requestCode, resultCode, data);
     }
 
-
     public void onClick(View v){
         switch(v.getId()){
             case R.id.tv_register:
@@ -160,7 +159,10 @@ public class LoginActivity extends BaseActivity{
                 Login();
                 break;
             case R.id.tv_comein:
-                getTouristToken();
+                //getTouristToken();
+                //直接进去
+                startActivity(new Intent(LoginActivity.this,MainActivity.class));
+                finish();
                 break;
             case R.id.wechat_login:
                 thirdAuthVerfy(this,SHARE_MEDIA.WEIXIN,umAuthListener);
