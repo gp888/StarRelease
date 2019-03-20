@@ -18,12 +18,11 @@ android {
         }
     }
     compileSdkVersion rootProject.ext.compileSdkVersion
-    buildToolsVersion '27.0.3'
 
     defaultConfig {
         applicationId "com.xingfabu.direct"
         minSdkVersion 19
-        targetSdkVersion 26
+        targetSdkVersion 28
         versionCode 20161216
         versionName "3.0.2"
         flavorDimensions "versionCode"
