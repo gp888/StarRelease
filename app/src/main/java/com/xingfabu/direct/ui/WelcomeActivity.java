@@ -166,7 +166,7 @@ public class WelcomeActivity extends BaseActivity{
                 if(!TextUtils.isEmpty(SPCache.getInstance(WelcomeActivity.this).getToken())){
                     startActivity(intent);
                 }else{
-                    startActivity(new Intent(WelcomeActivity.this,LoginActivity.class));
+//                    startActivity(new Intent(WelcomeActivity.this,LoginActivity.class));
                 }
                 finish();
             }

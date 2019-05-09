@@ -57,10 +57,12 @@ android {
 //            proguardFiles getDefaultProguardFile('proguard-Android.txt'), 'proguard-rules.pro'
             //签名
 //            signingConfig signingConfigs.debug
+            buildConfigField "String", "AppIdConfig", '"11904161818"'
         }
         release {
             // 不显示Log
             buildConfigField "boolean", "LOG_DEBUG", "false"
+            buildConfigField "String", "AppIdConfig", '"11904161818"'
             minifyEnabled false
             //拉链对齐
             //zipAlignEnabled true

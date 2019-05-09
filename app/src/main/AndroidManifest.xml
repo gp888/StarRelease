@@ -40,6 +40,13 @@
     <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
     <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
 
+
+
+    <uses-permission android:name="com.wenxikeji.xingxia.permission.JPUSH_MESSAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+
+
     <application
         android:name=".app.App"
         android:allowBackup="true"
@@ -56,11 +63,7 @@
             android:theme="@style/SplashTheme"
             android:noHistory="true"
             android:screenOrientation="portrait">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
 
-                <category android:name="android.intent.category.LAUNCHER"/>
-            </intent-filter>
         </activity>
 
         <activity android:name=".ui.MainActivity"
@@ -357,5 +360,18 @@
             <grant-uri-permission android:pathPattern=".*" />
         </provider>
         <!-- youmeng 推送end -->
+
+
+        <activity android:name=".newpackage.LoginActivity"/>
+        <activity android:name=".newpackage.RegisterActivity"/>
+        <activity android:name=".newpackage.MWeb"/>
+        <activity android:name=".newpackage.CheckAppIdActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
     </application>
 </manifest>

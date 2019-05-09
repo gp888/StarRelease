@@ -1851,8 +1851,8 @@ public class WatchHLSActivity extends BaseActivity implements SurfaceHolder.Call
 	//没登录去登录
 	private void gotoLogin(){
 		if(TextUtils.isEmpty(SPCache.getInstance(this).getToken())){
-			startActivity(new Intent(this, LoginActivity.class));
-			finish();
+//			startActivity(new Intent(this, LoginActivity.class));
+//			finish();
 			return;
 		}
 	}

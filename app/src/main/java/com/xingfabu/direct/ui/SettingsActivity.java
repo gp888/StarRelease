@@ -180,8 +180,8 @@ public class SettingsActivity extends BaseActivity{
                                 platform = SHARE_MEDIA.SINA;
                             }
                             mShareAPI.deleteOauth(SettingsActivity.this, platform, umdelAuthListener);
-                            startActivity(new Intent(SettingsActivity.this,LoginActivity.class));
-                            ActivityCollector.finishAll();
+//                            startActivity(new Intent(SettingsActivity.this,LoginActivity.class));
+//                            ActivityCollector.finishAll();
                         }
                     }
                 });

@@ -243,8 +243,8 @@ public class TalkFragment extends Fragment implements View.OnClickListener{
             //发消息:发弹幕,发消息,保存弹幕,添加评论
             case R.id.tv_send:
                 if(TextUtils.isEmpty(SPCache.getInstance(getContext()).getToken())){
-                    startActivity(new Intent(getContext(), LoginActivity.class));
-                    getActivity().finish();
+//                    startActivity(new Intent(getContext(), LoginActivity.class));
+//                    getActivity().finish();
                     return;
                 }
                 String sentence = et_content.getText().toString().trim();

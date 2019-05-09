@@ -145,11 +145,11 @@ public class MainActivity extends BaseActivity {
             @Override
             public void onClick(View v) {
                 //没登录,去登录
-                if(TextUtils.isEmpty(SPCache.getInstance(MainActivity.this).getToken())){
-                    startActivity(new Intent(MainActivity.this,LoginActivity.class));
-                    return;
-                }
-                startActivity(new Intent(MainActivity.this, UserInfoActivity.class));
+//                if(TextUtils.isEmpty(SPCache.getInstance(MainActivity.this).getToken())){
+//                    startActivity(new Intent(MainActivity.this,LoginActivity.class));
+//                    return;
+//                }
+//                startActivity(new Intent(MainActivity.this, UserInfoActivity.class));
                 drawerLayout_main.closeDrawer(Gravity.LEFT);
             }
         });
@@ -317,8 +317,8 @@ public class MainActivity extends BaseActivity {
                             SPCache.getInstance(MainActivity.this).savePic("");
                             SPCache.getInstance(MainActivity.this).saveName("");
                             SPCache.getInstance(MainActivity.this).saveWiFiFlag(1);
-                            startActivity(new Intent(MainActivity.this,LoginActivity.class));
-                            ActivityCollector.finishAll();
+//                            startActivity(new Intent(MainActivity.this,LoginActivity.class));
+//                            ActivityCollector.finishAll();
                             return;
                         }else {
                             float versionOnline = Float.parseFloat(resp.result.version);
@@ -516,21 +516,21 @@ public class MainActivity extends BaseActivity {
                 switch (item.getItemId()){
                     case R.id.user_message:
                         if(TextUtils.isEmpty(SPCache.getInstance(MainActivity.this).getToken())){
-                            startActivity(new Intent(MainActivity.this,LoginActivity.class));
+//                            startActivity(new Intent(MainActivity.this,LoginActivity.class));
                             break;
                         }
                         startActivity(new Intent(MainActivity.this,MyMessageActivity.class));
                         break;
                     case R.id.user_collection:
                         if(TextUtils.isEmpty(SPCache.getInstance(MainActivity.this).getToken())){
-                            startActivity(new Intent(MainActivity.this,LoginActivity.class));
+//                            startActivity(new Intent(MainActivity.this,LoginActivity.class));
                             break;
                         }
                         startActivity(new Intent(MainActivity.this,CollectionActivity.class));
                         break;
                     case R.id.user_play_record:
                         if(TextUtils.isEmpty(SPCache.getInstance(MainActivity.this).getToken())){
-                            startActivity(new Intent(MainActivity.this,LoginActivity.class));
+//                            startActivity(new Intent(MainActivity.this,LoginActivity.class));
                             break;
                         }
                        startActivity(new Intent(MainActivity.this,PlayRecordActivity.class));

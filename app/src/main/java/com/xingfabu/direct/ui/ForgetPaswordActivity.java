@@ -149,8 +149,8 @@ public class ForgetPaswordActivity extends BaseActivity{
                             return;
                         }
                         SPCache.getInstance(ForgetPaswordActivity.this).savePhoneNum(phoneNumber);
-                        startActivity(new Intent(ForgetPaswordActivity.this, LoginActivity.class));
-                        finish();
+//                        startActivity(new Intent(ForgetPaswordActivity.this, LoginActivity.class));
+//                        finish();
                     }
                 });
     }
