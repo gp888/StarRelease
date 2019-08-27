@@ -38,7 +38,7 @@ public class SplashActivity extends AppCompatActivity {
                 if(!TextUtils.isEmpty(SPCache.getInstance(SplashActivity.this).getToken())){
                     startActivity(intent);
                 }else{
-//                    startActivity(new Intent(SplashActivity.this,LoginActivity.class));
+                    startActivity(new Intent(SplashActivity.this,LoginActivity.class));
                 }
             }
         }, time);
