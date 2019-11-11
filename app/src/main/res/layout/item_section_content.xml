@@ -53,10 +53,10 @@
             android:layout_toRightOf="@+id/author_name"
             android:layout_alignBottom="@+id/author_name"/>
     </RelativeLayout>
-    <android.support.v7.widget.RecyclerView
+    <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/author_video"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp">
-    </android.support.v7.widget.RecyclerView>
+    </androidx.recyclerview.widget.RecyclerView>
 </LinearLayout>

@@ -7,7 +7,7 @@
     android:background="@drawable/imag_start"
     android:gravity="center_horizontal"
     android:fitsSystemWindows="true">
-    <android.support.v7.widget.Toolbar
+    <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolBar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
@@ -22,7 +22,7 @@
             android:textColor="#dfdfdc"
             android:layout_gravity="center"
             />
-    </android.support.v7.widget.Toolbar>
+    </androidx.appcompat.widget.Toolbar>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="45dp"

@@ -1,9 +1,8 @@
 package com.xingfabu.direct.ui;
 
-import android.content.Intent;
 import android.os.Build;
 import android.os.Handler;
-import android.support.v7.widget.Toolbar;
+import androidx.appcompat.widget.Toolbar;
 import android.text.TextUtils;
 import android.view.View;
 import android.view.WindowManager;

@@ -5,12 +5,12 @@
     android:background="@color/white"
     android:orientation="vertical">
 
-    <android.support.v4.view.ViewPager
+    <androidx.viewpager.widget.ViewPager
         android:id="@+id/viewpager"
         android:layout_width="match_parent"
         android:layout_height="148dp"
         android:layout_gravity="center"
-        android:background="@color/white"></android.support.v4.view.ViewPager>
+        android:background="@color/white"></androidx.viewpager.widget.ViewPager>
 
     <com.xingfabu.direct.emoji.DotGroup
         android:id="@+id/dotGroup"

@@ -1,8 +1,8 @@
 package com.xingfabu.direct.ui;
 
 import android.content.Intent;
-import android.support.v4.content.LocalBroadcastManager;
-import android.support.v7.widget.Toolbar;
+import androidx.localbroadcastmanager.content.LocalBroadcastManager;
+import androidx.appcompat.widget.Toolbar;
 import android.view.View;
 import android.widget.CompoundButton;
 import android.widget.Switch;
@@ -15,7 +15,6 @@ import com.xingfabu.direct.R;
 import com.xingfabu.direct.app.UrlConstants;
 import com.xingfabu.direct.cache.SPCache;
 import com.xingfabu.direct.entity.BaseResponse;
-import com.xingfabu.direct.utils.ActivityCollector;
 import com.xingfabu.direct.utils.MD5Helper;
 import com.xingfabu.direct.utils.MyStringCallback;
 import com.xingfabu.direct.widget.Loading;

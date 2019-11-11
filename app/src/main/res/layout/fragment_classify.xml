@@ -9,18 +9,18 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
         <!--android:elevation="5dp"-->
-        <android.support.design.widget.TabLayout
+        <com.google.android.material.tabs.TabLayout
             android:id="@+id/classify_tab_layout"
             android:layout_width="match_parent"
             android:layout_height="38dp"
             android:paddingBottom="2dp"
             style="@style/MyCustomTabLayout">
-        </android.support.design.widget.TabLayout>
-        <android.support.v4.view.ViewPager
+        </com.google.android.material.tabs.TabLayout>
+        <androidx.viewpager.widget.ViewPager
             android:id="@+id/classify_view_pager"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-        </android.support.v4.view.ViewPager>
+        </androidx.viewpager.widget.ViewPager>
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
