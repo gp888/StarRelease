@@ -1,8 +1,8 @@
 package com.xingfabu.direct.widget;
 
-import android.app.Activity;
-import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.support.v7.app.AlertDialog;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Gravity;
 import android.view.KeyEvent;
 import android.view.View;
@@ -17,10 +17,10 @@ import com.xingfabu.direct.R;
  * Created by guoping on 16/8/1.
  */
 public class RedPacketDialog {
-    private Activity activity;
+    private AppCompatActivity activity;
     private AlertDialog dialog;
     private String title;
-    public RedPacketDialog(Activity activity, String title) {
+    public RedPacketDialog(AppCompatActivity activity, String title) {
         this.activity = activity;
         this.title = title;
     }

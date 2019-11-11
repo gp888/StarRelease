@@ -1,13 +1,14 @@
 package com.xingfabu.direct.ui;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Build;
+import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.EditText;
 import android.widget.TextView;
+
 import com.umeng.socialize.UMAuthListener;
 import com.umeng.socialize.UMShareAPI;
 import com.umeng.socialize.bean.SHARE_MEDIA;
@@ -22,7 +23,9 @@ import com.xingfabu.direct.utils.StarReleaseUtil;
 import com.xingfabu.direct.utils.Verification;
 import com.xingfabu.direct.widget.Loading;
 import com.zhy.http.okhttp.OkHttpUtils;
+
 import java.util.Map;
+
 import okhttp3.Call;
 
 /**
@@ -292,7 +295,7 @@ public class LoginActivity extends BaseActivity{
 //        MobclickAgent.onPause(this);
     }
     //三方登录
-    private void thirdAuthVerfy(Activity activity, SHARE_MEDIA share_media, UMAuthListener umAuthListener){
+    private void thirdAuthVerfy(AppCompatActivity activity, SHARE_MEDIA share_media, UMAuthListener umAuthListener){
         mShareAPI.doOauthVerify(activity, share_media, umAuthListener);
     }
     private void thirdLogin(String type,String userName,String usid,String iconUrl,String platform){

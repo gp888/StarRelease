@@ -27,7 +27,7 @@ import okhttp3.Call;
  * Created by 郭平 on 2016/3/29 0029.
  */
 public class RegisterActivity extends BaseActivity{
-    private Handler handler = new Handler();;
+    private Handler handler = new Handler();
     private Runnable runnable = new Runnable() {
         @Override
         public void run() {

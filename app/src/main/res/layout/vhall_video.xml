@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<RelativeLayout xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/video_box"
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
@@ -39,7 +39,7 @@
             android:layout_width="100dp"
             android:layout_height="60dp"
             android:scaleType="centerInside"
-            android:src="@drawable/icon_play_play"/>
+            app:srcCompat="@drawable/icon_play_play"/>
     </LinearLayout>
 
     <!-- 网络提示-->

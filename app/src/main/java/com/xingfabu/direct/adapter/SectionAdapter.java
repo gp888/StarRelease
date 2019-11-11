@@ -1,12 +1,12 @@
 package com.xingfabu.direct.adapter;
 
-import android.app.Activity;
 import android.content.Context;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.ImageView;
-import android.widget.Toast;
+
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.chad.library.adapter.base.BaseQuickAdapter;
@@ -27,13 +27,13 @@ import java.util.List;
  */
 
 public class SectionAdapter extends BaseSectionQuickAdapter<MySection> {
-    private Activity activity;
+    private AppCompatActivity activity;
     /**
      * @param sectionHeadResId The section head horigrid id for each item
      * @param layoutResId The horigrid resource id of each item.
      *@param data  A new list is created out of this one to avoid mutable list
     */
-    public SectionAdapter(Activity activity, int layoutResId, int sectionHeadResId, List<MySection> data) {
+    public SectionAdapter(AppCompatActivity activity, int layoutResId, int sectionHeadResId, List<MySection> data) {
         super(activity,layoutResId, sectionHeadResId, data);
         this.activity = activity;
     }

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:foreground="?android:attr/selectableItemBackground"
+    android:foreground="?attr/selectableItemBackground"
     card_view:cardCornerRadius="4dp"
     card_view:cardElevation="2dp"
     card_view:cardUseCompatPadding="true">
@@ -31,7 +31,7 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/icon_live"/>
+                card_view:srcCompat="@drawable/icon_live"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -55,7 +55,7 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/icon_yu"/>
+                card_view:srcCompat="@drawable/icon_yu"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -105,7 +105,7 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/icon_date"
+                card_view:srcCompat="@drawable/icon_date"
                 android:layout_marginLeft="15dp"/>
             <TextView
                 android:id="@+id/video_date"
@@ -144,24 +144,24 @@
                     android:id="@+id/video_day"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/icon_days"
+                    card_view:srcCompat="@drawable/icon_days"
                     />
                 <ImageView
                     android:id="@+id/video_hour"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/icon_hours"
+                    card_view:srcCompat="@drawable/icon_hours"
                     android:layout_toRightOf="@+id/video_day"/>
                 <ImageView
                     android:id="@+id/video_min"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/icon_mins"
+                    card_view:srcCompat="@drawable/icon_mins"
                     android:layout_toRightOf="@+id/video_hour"/>
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/icon_secs"
+                    card_view:srcCompat="@drawable/icon_secs"
                     android:layout_toRightOf="@+id/video_min"/>
                 <cn.iwgang.countdownview.CountdownView
                     android:id="@+id/video_countview"

@@ -1,9 +1,10 @@
 package com.xingfabu.direct.wxapi;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.widget.Toast;
+
 import com.tencent.mm.sdk.constants.ConstantsAPI;
 import com.tencent.mm.sdk.modelbase.BaseReq;
 import com.tencent.mm.sdk.modelbase.BaseResp;
@@ -14,7 +15,7 @@ import com.xingfabu.direct.R;
 import com.xingfabu.direct.app.UrlConstants;
 import com.xingfabu.direct.ui.WatchActivity;
 
-public class WXPayEntryActivity extends Activity implements IWXAPIEventHandler {
+public class WXPayEntryActivity extends AppCompatActivity implements IWXAPIEventHandler {
 
     private IWXAPI api;
 	

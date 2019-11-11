@@ -1,17 +1,28 @@
 package com.xingfabu.direct.newpackage;
 
-import android.app.*;
-import android.content.*;
-import android.graphics.*;
-import android.net.*;
-import android.os.*;
-import android.view.*;
-import android.webkit.*;
-import java.net.*;
-import android.widget.*;
+import android.content.Context;
+import android.content.Intent;
+import android.graphics.Bitmap;
+import android.net.Uri;
+import android.os.Build;
+import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.view.KeyEvent;
+import android.view.View;
+import android.view.Window;
+import android.webkit.DownloadListener;
+import android.webkit.WebBackForwardList;
+import android.webkit.WebHistoryItem;
+import android.webkit.WebResourceRequest;
+import android.webkit.WebSettings;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
+
+import java.net.MalformedURLException;
+import java.net.URL;
 
 
-public class MWeb extends Activity {
+public class MWeb extends AppCompatActivity {
 	WebView webView;
 	String urlurl;
 

@@ -1,8 +1,8 @@
 package com.xingfabu.direct.utils;
 
-import android.app.Activity;
 import android.content.Context;
 import android.graphics.Rect;
+import android.support.v7.app.AppCompatActivity;
 import android.util.DisplayMetrics;
 import android.util.TypedValue;
 
@@ -27,7 +27,7 @@ public class ScreenSizeUtil {
 //			return metrics;
 //		}
 		metrics = new DisplayMetrics();
-		((Activity) context).getWindowManager().getDefaultDisplay().getMetrics(metrics);
+		((AppCompatActivity) context).getWindowManager().getDefaultDisplay().getMetrics(metrics);
 		return metrics;
 	}
 
@@ -77,7 +77,7 @@ public class ScreenSizeUtil {
 		return (int) (spValue * context.getResources().getDisplayMetrics().scaledDensity + 0.5f);
 	}
 
-	public static int getAreaTwoWidth(Activity activity) {
+	public static int getAreaTwoWidth(AppCompatActivity activity) {
 		Rect outRect = new Rect();
 		activity.getWindow().getDecorView().getWindowVisibleDisplayFrame(outRect);
 		// System.out.println("top:"+outRect.top +" ; left: "+outRect.left) ;
@@ -86,7 +86,7 @@ public class ScreenSizeUtil {
 		return outRect.width();
 	}
 
-	public static int getAreaTwoHeight(Activity activity) {
+	public static int getAreaTwoHeight(AppCompatActivity activity) {
 		Rect outRect = new Rect();
 		activity.getWindow().getDecorView().getWindowVisibleDisplayFrame(outRect);
 		// System.out.println("top:"+outRect.top +" ; left: "+outRect.left) ;
@@ -95,7 +95,7 @@ public class ScreenSizeUtil {
 		return outRect.height();
 	}
 	
-	public static int getStatusBarHeight(Activity activity){
+	public static int getStatusBarHeight(AppCompatActivity activity){
 		Rect frame = new Rect();
 		activity.getWindow().getDecorView().getWindowVisibleDisplayFrame(frame);  
 		return frame.top; 

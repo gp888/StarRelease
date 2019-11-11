@@ -1,10 +1,11 @@
 package com.xingfabu.direct.utils;
 
-import android.app.Activity;
 import android.content.Intent;
+import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.util.Log;
 import android.widget.Toast;
+
 import com.xingfabu.direct.app.App;
 import com.xingfabu.direct.app.Param;
 import com.xingfabu.direct.app.UrlConstants;
@@ -13,6 +14,7 @@ import com.xingfabu.direct.entity.GetVhallToken;
 import com.xingfabu.direct.ui.WatchActivity;
 import com.xingfabu.direct.widget.Loading;
 import com.zhy.http.okhttp.OkHttpUtils;
+
 import io.rong.imlib.RongIMClient;
 import okhttp3.Call;
 
@@ -27,7 +29,7 @@ public class VideoUtils {
     private String share_pic = null;
     private RongIMClient mRongIMClient;
     private Loading mLoading = null;
-    private Activity activity;
+    private AppCompatActivity activity;
     private static VideoUtils mInstance = null;
 
     private boolean is_close;//霸屏榜
@@ -83,7 +85,7 @@ public class VideoUtils {
     }
 
 
-    public void prepareToPlay(String sid,String webinar_id,String webinar_type,String share_pic,Activity activity,boolean is_close,int surplus,int from){
+    public void prepareToPlay(String sid, String webinar_id, String webinar_type, String share_pic, AppCompatActivity activity, boolean is_close, int surplus, int from){
         this.activity = activity;
         mLoading = new Loading(activity);
         mLoading.show();

@@ -1,18 +1,20 @@
 package com.xingfabu.direct.utils;
 
 import android.annotation.TargetApi;
-import android.app.Activity;
 import android.content.Context;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Environment;
+import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
+
 import com.xingfabu.direct.app.UrlConstants;
 import com.xingfabu.direct.cache.SPCache;
+
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 import java.text.DateFormat;
@@ -24,13 +26,13 @@ import java.util.Date;
  * Created by 郭平 on 2016/3/31 0031.
  */
 public class StarReleaseUtil {
-    public static void openImm(Activity activity){//打开
+    public static void openImm(AppCompatActivity activity){//打开
         InputMethodManager imm = (InputMethodManager) activity.getSystemService(Context.INPUT_METHOD_SERVICE);
         imm.toggleSoftInput(0, InputMethodManager.SHOW_FORCED);
         imm.showSoftInput(activity.getCurrentFocus(),InputMethodManager.SHOW_FORCED);
     }
 
-    public static void closeImm(Activity activity){//关闭
+    public static void closeImm(AppCompatActivity activity){//关闭
         InputMethodManager imm = (InputMethodManager) activity.getSystemService(Context.INPUT_METHOD_SERVICE);
         imm.hideSoftInputFromWindow(activity.getCurrentFocus().getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
     }
@@ -43,13 +45,13 @@ public class StarReleaseUtil {
         imm.showSoftInput(view, InputMethodManager.SHOW_IMPLICIT);
     }
 
-    public static void toggleImm(Activity activity){//切换
+    public static void toggleImm(AppCompatActivity activity){//切换
         //1.得到InputMethodManager对象
         InputMethodManager imm = (InputMethodManager) activity.getSystemService(Context.INPUT_METHOD_SERVICE);
         //2.调用toggleSoftInput方法，实现切换显示软键盘的功能。
         imm.toggleSoftInput(0, InputMethodManager.HIDE_NOT_ALWAYS);
     }
-    public static boolean getImmStatus(Activity activity){//获得状态
+    public static boolean getImmStatus(AppCompatActivity activity){//获得状态
         //1.得到InputMethodManager对象
         InputMethodManager imm = (InputMethodManager)activity.getSystemService(Context.INPUT_METHOD_SERVICE);
             //获取状态信息
@@ -77,7 +79,7 @@ public class StarReleaseUtil {
      * @param darkmode
      * @return
      */
-    public static boolean setMiuiStatusBarDarkMode(Activity activity, boolean darkmode) {
+    public static boolean setMiuiStatusBarDarkMode(AppCompatActivity activity, boolean darkmode) {
         Class<? extends Window> clazz = activity.getWindow().getClass();
         try {
             int darkModeFlag = 0;
@@ -99,7 +101,7 @@ public class StarReleaseUtil {
      * @param dark
      * @return
      */
-    public static boolean setMeizuStatusBarDarkIcon(Activity activity, boolean dark) {
+    public static boolean setMeizuStatusBarDarkIcon(AppCompatActivity activity, boolean dark) {
         boolean result = false;
         if (activity != null) {
             try {
@@ -204,7 +206,7 @@ public class StarReleaseUtil {
     /**
      * 清除MIUI或flyme或6.0以上版本状态栏黑色字体
      */
-    public static void StatusBarDarkMode(Activity activity,int type){
+    public static void StatusBarDarkMode(AppCompatActivity activity, int type){
         if(type==1){
             MIUISetStatusBarLightMode(activity.getWindow(), false);
         }else if(type==2){
@@ -220,7 +222,7 @@ public class StarReleaseUtil {
      * @param activity
      * @param type 1:MIUUI 2:Flyme 3:android6.0
      */
-    public static void StatusBarLightMode(Activity activity,int type){
+    public static void StatusBarLightMode(AppCompatActivity activity, int type){
         if(type==1){
             MIUISetStatusBarLightMode(activity.getWindow(), true);
         }else if(type==2){
@@ -235,7 +237,7 @@ public class StarReleaseUtil {
      * @param activity
      * @return 1:MIUUI 2:Flyme 3:android6.0
      */
-    public static int StatusBarLightMode(Activity activity){
+    public static int StatusBarLightMode(AppCompatActivity activity){
         int result=0;
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
             if(MIUISetStatusBarLightMode(activity.getWindow(), true)){
@@ -256,7 +258,7 @@ public class StarReleaseUtil {
      * @param colorId
      * System Bar Tint废弃了
      */
-    public static void setStatusBarColor(Activity activity,int colorId) {
+    public static void setStatusBarColor(AppCompatActivity activity, int colorId) {
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             Window window = activity.getWindow();
@@ -275,7 +277,7 @@ public class StarReleaseUtil {
      * @param activity
      */
     @TargetApi(19)
-    public static void transparencyBar(Activity activity){
+    public static void transparencyBar(AppCompatActivity activity){
         if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             Window window = activity.getWindow();
             window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS

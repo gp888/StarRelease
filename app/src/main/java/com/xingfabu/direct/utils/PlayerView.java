@@ -1,6 +1,5 @@
 package com.xingfabu.direct.utils;
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.pm.ActivityInfo;
 import android.content.res.Configuration;
@@ -22,6 +21,7 @@ import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.SeekBar;
 import android.widget.TextView;
+
 import com.vhall.business.WatchLive;
 import com.vhall.business.WatchPlayback;
 import com.vhall.business.widget.ContainerLayout;
@@ -39,7 +39,7 @@ public class PlayerView {
     /**
      * 依附的容器Activity
      */
-    private final Activity mActivity;
+    private final AppCompatActivity mActivity;
     /**
      * 获取当前设备的宽度
      */
@@ -322,7 +322,7 @@ public class PlayerView {
         }
     };
 
-    public PlayerView(Activity activity , View rootView, Param param, WatchPlayback watchPlayback, WatchLive watchLive){
+    public PlayerView(AppCompatActivity activity , View rootView, Param param, WatchPlayback watchPlayback, WatchLive watchLive){
         this.mActivity = activity;
         this.mContext = activity;
         this.param = param;

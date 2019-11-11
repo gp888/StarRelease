@@ -17,7 +17,7 @@
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:padding="10dp"
-            android:src="@drawable/ic_person"
+            app:srcCompat="@drawable/ic_person"
             android:layout_gravity="start|center_vertical"/>
         <TextView
             android:id="@+id/title_main"
@@ -32,7 +32,7 @@
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:padding="10dp"
-            android:src="@drawable/ic_search"
+            app:srcCompat="@drawable/ic_search"
             android:layout_gravity="end|center_vertical"
             android:layout_marginRight="15dp"/>
     </android.support.v7.widget.Toolbar>

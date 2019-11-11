@@ -1,6 +1,5 @@
 package com.xingfabu.direct.utils;
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
@@ -11,8 +10,10 @@ import android.media.ExifInterface;
 import android.net.Uri;
 import android.os.Environment;
 import android.provider.MediaStore;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.widget.Toast;
+
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.File;
@@ -40,7 +41,7 @@ public class PhotoUtil {
      * 拍照选择
      * @param activity
      */
-    public static String doTakePhoto(Activity activity){
+    public static String doTakePhoto(AppCompatActivity activity){
         String state = Environment.getExternalStorageState(); // 判断是否存在sd卡
         if (state.equals(Environment.MEDIA_MOUNTED)) { // 调用系统的照相机
             Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
@@ -61,7 +62,7 @@ public class PhotoUtil {
      * 拍照产生临时文件名
      * @return
      */
-    private static String getFileName(Activity activity) {
+    private static String getFileName(AppCompatActivity activity) {
         String saveDir = Environment.getExternalStorageDirectory()+ "/Yun/Images";
         File dir = new File(saveDir);
         if (!dir.exists()) {
@@ -87,7 +88,7 @@ public class PhotoUtil {
      * 从相册选择图片(为了解决4.4不能返回path的问题)
      * @param activity
      */
-    public static void selectImgFromGallery(Activity activity){
+    public static void selectImgFromGallery(AppCompatActivity activity){
         Intent intent=new Intent(Intent.ACTION_GET_CONTENT);//ACTION_OPEN_DOCUMENT
         intent.addCategory(Intent.CATEGORY_OPENABLE);
         intent.setType("image/jpeg");
@@ -103,7 +104,7 @@ public class PhotoUtil {
      * @param filePath
      * @return
      */
-    public static Bitmap readBitmapFromPath(Activity context, String filePath) {
+    public static Bitmap readBitmapFromPath(AppCompatActivity context, String filePath) {
         BitmapFactory.Options options = new BitmapFactory.Options();
         options.inJustDecodeBounds = true;
         BitmapFactory.decodeFile(filePath, options);
@@ -135,7 +136,7 @@ public class PhotoUtil {
      * @param outHeight
      * @return
      */
-    public static int calculateInSampleSize(Activity context, int outWidth, int outHeight){
+    public static int calculateInSampleSize(AppCompatActivity context, int outWidth, int outHeight){
         int screenWidth = context.getWindowManager().getDefaultDisplay().getWidth();
         int screenHeight = context.getWindowManager().getDefaultDisplay().getHeight();
         int be;
@@ -182,7 +183,7 @@ public class PhotoUtil {
         return baos.toByteArray();
     }
 
-    public static Bitmap compressImage(Activity activity, Bitmap image, int screenWidth, int screenHight) {
+    public static Bitmap compressImage(AppCompatActivity activity, Bitmap image, int screenWidth, int screenHight) {
         ByteArrayOutputStream baos = new ByteArrayOutputStream();
         image.compress(Bitmap.CompressFormat.JPEG, 100, baos);
         if( baos.toByteArray().length / 1024>1024) {//判断如果图片大于1M,进行压缩避免在生成图片（BitmapFactory.decodeStream）时溢出
@@ -237,7 +238,7 @@ public class PhotoUtil {
      * @param context Activity
      * @return 缩放后的新图片
      */
-    public static Bitmap zoomImgToFitScreen(Bitmap bm, Activity context){
+    public static Bitmap zoomImgToFitScreen(Bitmap bm, AppCompatActivity context){
         // 获得图片的宽高
         int width = bm.getWidth();
         int height = bm.getHeight();
@@ -340,7 +341,7 @@ public class PhotoUtil {
      * @param fileDir "/Yun/Images/Thumbnails"--收到的聊天缩略图  "/Yun/Images/Original"--收到的聊天原图  "/Yun/Images/"--其他
      * @return
      */
-    public static String saveBitmaptoSdCard(Bitmap bm, Activity mContext, String fileDir, String url) {
+    public static String saveBitmaptoSdCard(Bitmap bm, AppCompatActivity mContext, String fileDir, String url) {
         if(Environment.getExternalStorageState().equals(Environment.MEDIA_MOUNTED)){
             File sdCardDir = Environment.getExternalStorageDirectory();
             File yaoYanDir = new File(sdCardDir.getPath()+fileDir);

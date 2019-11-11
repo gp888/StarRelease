@@ -2,6 +2,7 @@
 <!-- 底部栏 -->
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/ll_bottom_bar"
@@ -29,7 +30,7 @@
             android:onClick="onClick"
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:src="@drawable/red_hearth"
+            app:srcCompat="@drawable/red_hearth"
             android:scaleType="center"
             android:visibility="gone"/>
 
@@ -59,7 +60,7 @@
             android:padding="10dp"
             android:onClick="onClick"
             android:scaleType="centerInside"
-            android:src="@drawable/icon_play_play"/>
+            app:srcCompat="@drawable/icon_play_play"/>
 
         <LinearLayout
             android:id="@+id/video_process_panl"
@@ -126,7 +127,7 @@
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:padding="10dp"
-            android:src="@drawable/icon_edit"
+            app:srcCompat="@drawable/icon_edit"
             android:scaleType="centerInside"
             android:visibility="gone"
             android:onClick="onClick"/>
@@ -136,7 +137,7 @@
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:padding="10dp"
-            android:src="@drawable/icon_tan"
+            app:srcCompat="@drawable/icon_tan"
             android:scaleType="centerInside"
             android:onClick="onClick"
             android:visibility="gone"/>
@@ -146,7 +147,7 @@
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:padding="10dp"
-            android:src="@drawable/icon_shang"
+            app:srcCompat="@drawable/icon_shang"
             android:scaleType="centerInside"
             android:onClick="onClick"/>
 
@@ -155,7 +156,7 @@
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:padding="15dp"
-            android:src="@drawable/icon_full"
+            app:srcCompat="@drawable/icon_full"
             android:onClick="onClick"/>
 
     </LinearLayout>

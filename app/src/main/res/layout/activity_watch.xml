@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:keepScreenOn="true"
@@ -53,7 +54,7 @@
                 android:id="@+id/close_video_adver"
                 android:layout_width="15dp"
                 android:layout_height="15dp"
-                android:src="@drawable/icon_close"
+                app:srcCompat="@drawable/icon_close"
                 android:layout_alignRight="@+id/video_adver"
                 android:layout_alignTop="@+id/video_adver"/>
         </RelativeLayout>

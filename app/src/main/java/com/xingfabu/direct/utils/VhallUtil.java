@@ -1,8 +1,9 @@
 package com.xingfabu.direct.utils;
 
-import android.app.Activity;
 import android.content.Context;
+import android.support.v7.app.AppCompatActivity;
 import android.util.DisplayMetrics;
+
 import com.vhall.business.WatchLive;
 
 public class VhallUtil {
@@ -95,7 +96,7 @@ public class VhallUtil {
 			return metrics;
 		}
         metrics = new DisplayMetrics();
-        ((Activity) context).getWindowManager().getDefaultDisplay().getMetrics(metrics);
+        ((AppCompatActivity) context).getWindowManager().getDefaultDisplay().getMetrics(metrics);
         return metrics;
     }
 

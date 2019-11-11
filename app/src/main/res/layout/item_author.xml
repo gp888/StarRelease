@@ -16,7 +16,7 @@
             android:id="@+id/timeline_pic"
             android:layout_width="match_parent"
             android:layout_height="210dp"
-            android:src="@drawable/icon_zhan"
+            card_view:srcCompat="@drawable/icon_zhan"
             android:scaleType="fitXY"/>
         <RelativeLayout
             android:layout_width="match_parent"

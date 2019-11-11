@@ -2,7 +2,7 @@
 <resources xmlns:android="http://schemas.android.com/apk/res/android">
     <style name="ACPLDialog">
         <item name="android:windowFrame">@null</item>
-        <item name="android:windowNoTitle">true</item>
+        <item name="windowNoTitle">true</item>
         <item name="android:windowIsFloating">true</item>
         <item name="android:windowContentOverlay">@null</item>
     </style>
@@ -42,8 +42,8 @@
         <item name="android:windowFrame">@null</item>
         <item name="android:windowIsFloating">true</item>
         <item name="android:windowIsTranslucent">true</item>
-        <item name="android:windowNoTitle">true</item>
-        <item name="android:background">@android:color/transparent</item>
+        <item name="windowNoTitle">true</item>
+        <item name="background">@android:color/transparent</item>
         <item name="android:windowBackground">@android:color/transparent</item>
         <item name="android:backgroundDimEnabled">true</item>
         <item name="android:backgroundDimAmount">0.6</item>
@@ -65,7 +65,7 @@
     </style>
 
     <style name="Theme.UMDialog" parent="android:style/Theme.Dialog">
-        <item name="android:windowNoTitle">true</item>
+        <item name="windowNoTitle">true</item>
         <item name="android:windowBackground">@android:color/transparent</item>
     </style>
 
@@ -74,13 +74,13 @@
     <style name="umeng_socialize_divider">
         <item name="android:layout_width">fill_parent</item>
         <item name="android:layout_height">1dp</item>
-        <item name="android:background">@color/umeng_socialize_divider</item>
+        <item name="background">@color/umeng_socialize_divider</item>
     </style>
 
     <style name="umeng_socialize_list_item">
         <item name="android:layout_width">fill_parent</item>
         <item name="android:layout_height">55dp</item>
-        <item name="android:background">@color/umeng_socialize_list_item_bgcolor</item>
+        <item name="background">@color/umeng_socialize_list_item_bgcolor</item>
         <item name="android:paddingBottom">5dp</item>
         <item name="android:paddingTop">5dp</item>
     </style>
@@ -88,7 +88,7 @@
     <style name="umeng_socialize_edit_padding">
         <item name="android:layout_width">fill_parent</item>
         <item name="android:layout_height">fill_parent</item>
-        <item name="android:background">@color/umeng_socialize_list_item_bgcolor</item>
+        <item name="background">@color/umeng_socialize_list_item_bgcolor</item>
         <item name="android:layout_marginLeft">6dp</item>
         <item name="android:layout_marginRight">6dp</item>
         <item name="android:layout_marginTop">6dp</item>

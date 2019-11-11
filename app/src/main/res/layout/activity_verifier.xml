@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -49,7 +50,7 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/icon_phone"
+            app:srcCompat="@drawable/icon_phone"
             android:layout_marginLeft="20dp"/>
         <EditText
             android:id="@+id/et_phone"
@@ -89,7 +90,7 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/icon_sms"
+            app:srcCompat="@drawable/icon_sms"
             android:layout_marginLeft="20dp"/>
         <EditText
             android:id="@+id/et_code"
@@ -118,7 +119,7 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/icon_lock"
+            app:srcCompat="@drawable/icon_lock"
             android:layout_marginLeft="20dp"/>
         <EditText
             android:id="@+id/et_password"
@@ -180,7 +181,7 @@
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/icon_logo" />
+        app:srcCompat="@drawable/icon_logo" />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

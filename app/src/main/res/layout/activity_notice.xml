@@ -29,7 +29,7 @@
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:padding="5dp"
-                    android:src="@drawable/icon_play_finish"
+                    app:srcCompat="@drawable/icon_play_finish"
                     android:layout_centerVertical="true"
                     android:onClick="onClick"/>
                 <ImageView
@@ -37,7 +37,7 @@
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:padding="5dp"
-                    android:src="@drawable/icon_share"
+                    app:srcCompat="@drawable/icon_share"
                     android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"
                     android:onClick="onClick"/>
@@ -69,24 +69,24 @@
                         android:id="@+id/iv_day"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/icon_days"
+                        app:srcCompat="@drawable/icon_days"
                         />
                     <ImageView
                         android:id="@+id/iv_hour"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/icon_hours"
+                        app:srcCompat="@drawable/icon_hours"
                         android:layout_toRightOf="@+id/iv_day"/>
                     <ImageView
                         android:id="@+id/iv_min"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/icon_mins"
+                        app:srcCompat="@drawable/icon_mins"
                         android:layout_toRightOf="@+id/iv_hour"/>
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/icon_secs"
+                        app:srcCompat="@drawable/icon_secs"
                         android:layout_toRightOf="@+id/iv_min"/>
                     <cn.iwgang.countdownview.CountdownView
                         android:id="@+id/notice_countview"

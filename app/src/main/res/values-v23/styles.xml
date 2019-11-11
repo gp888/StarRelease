@@ -6,7 +6,7 @@
                 <item name="colorPrimary">@color/newpink</item>
                 <item name="colorPrimaryDark">@color/newpink</item>
                 <item name="colorAccent">@color/colorAccent</item>
-                <item name="android:windowNoTitle">true</item>
+                <item name="windowNoTitle">true</item>
                 <item name="windowActionBar">false</item>
                 <item name="android:statusBarColor">@color/newpink</item>
                 <!--<item name="android:windowLightStatusBar">false</item>-->
